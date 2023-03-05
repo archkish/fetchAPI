@@ -1,6 +1,6 @@
 
 function getPosts () {
-  fetch('https://jsonplaceholder.typicode.com/posts')  
+  fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')  
   .then(response => response.json())
   .then(json => {
 
@@ -8,7 +8,7 @@ function getPosts () {
     block.className = 'out'
     document.body.appendChild(block)
 
-    json.slice(0 ,10).map((value) => {
+    json.map((value) => {
       
       let titleText = `${value.id} Title: ${value.title}`
       let bodyText = `Body: ${value.body}`
