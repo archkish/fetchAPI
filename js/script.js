@@ -8,7 +8,7 @@ function getPosts () {
     block.className = 'out'
     document.body.appendChild(block)
 
-    json.map((value) => {
+    json.slice(0 ,10).map((value) => {
       
       let titleText = `${value.id} Title: ${value.title}`
       let bodyText = `Body: ${value.body}`
